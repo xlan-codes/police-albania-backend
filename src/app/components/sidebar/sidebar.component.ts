@@ -13,9 +13,9 @@ export const ROUTES: RouteInfo[] = [
     { path: '/notifications', title: 'Notifications Sent',  icon: 'ui-1_bell-53', class: '' },
 
     { path: '/user-profile', title: 'Profile',  icon: 'users_single-02', class: '' },
-    { path: '/admin-user', title: 'Admin User',  icon: 'users_single-02', class: '' },
-    { path: '/table-list', title: 'Table List',  icon: 'design_bullet-list-67', class: '' },
-    { path: '/typography', title: 'Typography',  icon: 'text_caps-small', class: '' }
+    { path: '/admin-users', title: 'Admin User',  icon: 'users_single-02', class: '' },
+    // { path: '/table-list', title: 'Table List',  icon: 'design_bullet-list-67', class: '' },
+    // { path: '/typography', title: 'Typography',  icon: 'text_caps-small', class: '' }
 
 ];
 

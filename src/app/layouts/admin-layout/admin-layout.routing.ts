@@ -1,3 +1,4 @@
+import { AdminUsersComponent } from './../../admin-users/admin-users.component';
 import { Routes } from '@angular/router';
 
 import { DashboardComponent } from '../../dashboard/dashboard.component';
@@ -17,5 +18,6 @@ export const AdminLayoutRoutes: Routes = [
     { path: 'icons',          component: UsersComponent },
     { path: 'maps',           component: MapsComponent },
     { path: 'notifications',  component: NotificationsComponent },
+    { path: 'admin-users',  component: AdminUsersComponent },
     { path: 'upgrade',        component: UpgradeComponent }
 ];
