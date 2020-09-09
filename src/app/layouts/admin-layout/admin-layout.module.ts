@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -7,7 +7,7 @@ import { DashboardComponent } from '../../dashboard/dashboard.component';
 import { UserProfileComponent } from '../../user-profile/user-profile.component';
 import { TableListComponent } from '../../table-list/table-list.component';
 import { TypographyComponent } from '../../typography/typography.component';
-import { IconsComponent } from '../../icons/icons.component';
+import { UsersComponent } from '../../users/users.component';
 import { MapsComponent } from '../../maps/maps.component';
 import { NotificationsComponent } from '../../notifications/notifications.component';
 import { ChartsModule } from 'ng2-charts/ng2-charts';
@@ -30,10 +30,12 @@ import { UpgradeComponent } from '../../upgrade/upgrade.component';
     TableListComponent,
     UpgradeComponent,
     TypographyComponent,
-    IconsComponent,
+    UsersComponent,
     MapsComponent,
     NotificationsComponent,
-  ]
+  ],
+
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 
 export class AdminLayoutModule {}
