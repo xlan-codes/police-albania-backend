@@ -1,14 +1,11 @@
 import { NgModule } from '@angular/core';
 
 
-
 @NgModule({
     imports: [],
-    declarations: [],
     providers: [],
-    exports: [],
-    entryComponents: []
+    declarations: [],
 })
-export class UserModule {
+export class TrackingLocationModule {
 
 }
