@@ -5,12 +5,12 @@ import { BaseHttpService } from './base-http.service';
 
 
 @Injectable()
-export class UserServices extends BaseHttpService {
+export class AdminUserServices extends BaseHttpService {
 
     private url: string;
     constructor(protected http: HttpClient) {
         super(http);
-        this.url =  environment.user;
+        this.url =  environment.adminUser;
     }
 
     public async getUsers(): Promise<any> {

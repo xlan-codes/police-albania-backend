@@ -7,7 +7,7 @@
                 <h5>Users List</h5>
             </div>
             <div class="card-body">
-                <p-table #dt2 [value]="users" selectionMode="single" [(selection)]="selectedUsers" dataKey="id" styleClass="p-datatable-customers"
+                <p-table #dt [value]="users" selectionMode="single" [(selection)]="selectedUsers" dataKey="id" styleClass="p-datatable-customers"
                     [rows]="10" [paginator]="true" stateStorage="local" stateKey="statedemo-local">
                     <ng-template pTemplate="header">
                         <tr>
@@ -19,49 +19,44 @@
                         </tr>
                         <tr>
                             <th>
-                                <input pInputText type="text" (input)="dt1.filter($event.target.value, 'fullName', 'contains')" [value]="dt2.filters['fullName']?.value" placeholder="Search by Name" class="p-column-filter">
+                                <input pInputText type="text" (input)="dt.filter($event.target.value, 'fullName', 'contains')" [value]="dt.filters['fullName']?.value" placeholder="Search by Name" class="p-column-filter">
                             </th>
                             <th>
-                                <input pInputText type="text" (input)="dt1.filter($event.target.value, 'email', 'contains')" [value]="dt2.filters['email']?.value" placeholder="Search by Email" class="p-column-filter">
+                                <input pInputText type="text" (input)="dt.filter($event.target.value, 'email', 'contains')" [value]="dt.filters['email']?.value" placeholder="Search by Email" class="p-column-filter">
                             </th>
                             <th>
-                                <input pInputText type="text" (input)="dt1.filter($event.target.value, 'phoneNumber', 'contains')" [value]="dt2.filters['phoneNumber']?.value" placeholder="Search by Phone Number" class="p-column-filter">
+                                <input pInputText type="text" (input)="dt.filter($event.target.value, 'phoneNumber', 'contains')" [value]="dt.filters['phoneNumber']?.value" placeholder="Search by Phone Number" class="p-column-filter">
                             </th>
                             <th>
-                                <input pInputText type="text" (input)="dt1.filter($event.target.value, 'address', 'contains')" [value]="dt2.filters['address']?.value" placeholder="Search by Address" class="p-column-filter">
+                                <input pInputText type="text" (input)="dt.filter($event.target.value, 'address', 'contains')" [value]="dt.filters['address']?.value" placeholder="Search by Address" class="p-column-filter">
                             </th>
                             <th>
-                                <input pInputText type="text" (input)="dt1.filter($event.target.value, 'fcmId', 'contains')" [value]="dt2.filters['fcmId']?.value" placeholder="Search by Firebase ID" class="p-column-filter">
+                                <input pInputText type="text" (input)="dt.filter($event.target.value, 'fcmId', 'contains')" [value]="dt.filters['fcmId']?.value" placeholder="Search by Firebase ID" class="p-column-filter">
                             </th>
                         </tr>
                     </ng-template>
                     <ng-template pTemplate="body" let-user>
                         <tr [pSelectableRow]="user">
                             <td>
-                                <span class="p-column-title">Full Name</span>
-                                {{customer.fullName}}
+                                {{user.fullName}}
                             </td>
                             <td>
-                                <span class="p-column-title">Email</span>
-                                {{customer.email}}
+                                {{user.email}}
                             </td>
                             <td>
-                                <span class="p-column-title">Phone Number</span>
-                                {{customer.phoneNumber}}
+                                {{user.phoneNumber}}
                             </td>
                             <td>
-                                <span class="p-column-title">Address</span>
-                                {{customer.address}}
+                                {{user.address}}
                             </td>
                             <td>
-                                <span class="p-column-title">Firebase ID</span>
-                                {{customer.fcmId}}
+                                {{user.fcmId}}
                             </td>
                         </tr>
                     </ng-template>
                     <ng-template pTemplate="emptymessage">
                         <tr>
-                            <td colspan="4">No customers found.</td>
+                            <td colspan="4">No users found.</td>
                         </tr>
                     </ng-template>
                 </p-table>

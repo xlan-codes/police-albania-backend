@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { AdminUserServices } from './../../core/services/admin-user.services';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { Table } from 'primeng/table';
+import { User } from 'src/app/models/users.model';
 
 @Component({
   selector: 'app-admin-users',
@@ -7,9 +10,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdminUsersComponent implements OnInit {
 
-  constructor() { }
+  users: User[];
+
+  selectedUsers: User[];
+
+  @ViewChild('dt') dt: Table;
+
+  constructor(
+    private adminUserService: AdminUserServices
+  ) { }
 
   ngOnInit(): void {
+    this.getUsers();
   }
+
+  public async getUsers(): Promise<any> {
+    this.users = await this.adminUserService.getUsers();
+   }
 
 }

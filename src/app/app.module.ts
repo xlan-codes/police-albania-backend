@@ -23,7 +23,6 @@ import {ButtonModule} from 'primeng/button';
 import {DropdownModule} from 'primeng/dropdown';
 import {ProgressBarModule} from 'primeng/progressbar';
 import {InputTextModule} from 'primeng/inputtext';
-import { AdminUsersComponent } from './pages/admin-users/admin-users.component';
 
 @NgModule({
   imports: [
@@ -49,8 +48,7 @@ import { AdminUsersComponent } from './pages/admin-users/admin-users.component';
   ],
   declarations: [
     AppComponent,
-    AdminLayoutComponent,
-    AdminUsersComponent
+    AdminLayoutComponent
 
   ],
   providers: [],
