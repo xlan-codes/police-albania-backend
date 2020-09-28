@@ -9,7 +9,7 @@ declare interface RouteInfo {
 export const ROUTES: RouteInfo[] = [
     { path: '/dashboard', title: 'Dashboard',  icon: 'design_app', class: '' },
     { path: '/users', title: 'Users',  icon: 'education_atom', class: '' },
-    { path: '/maps', title: 'User Track Location',  icon: 'location_map-big', class: '' },
+    { path: '/tracking-location', title: 'User Track Location',  icon: 'location_map-big', class: '' },
     { path: '/notifications', title: 'Notifications Sent',  icon: 'ui-1_bell-53', class: '' },
 
     { path: '/user-profile', title: 'Profile',  icon: 'users_single-02', class: '' },
@@ -30,10 +30,11 @@ export class SidebarComponent implements OnInit {
   ngOnInit() {
     this.menuItems = ROUTES.filter(menuItem => menuItem);
   }
+
   isMobileMenu() {
       if ( window.innerWidth > 991) {
           return false;
       }
       return true;
-  };
+  }
 }

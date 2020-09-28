@@ -1,8 +1,6 @@
 import { UserProfileComponent } from './user-profile.component';
 import { Routes, RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { BrowserModule } from '@angular/platform-browser';
 
 
 const routes: Routes = [
@@ -12,8 +10,6 @@ const routes: Routes = [
 
 @NgModule({
     imports: [
-        CommonModule,
-        BrowserModule,
         RouterModule.forChild(routes)
       ],
       exports: [

@@ -1,3 +1,4 @@
+import { UserServices } from './../../core/services/user.services';
 import { UsersRoutingModule } from './users.routing';
 import { NgModule } from '@angular/core';
 
@@ -6,7 +7,9 @@ import { NgModule } from '@angular/core';
 @NgModule({
     imports: [UsersRoutingModule],
     declarations: [],
-    providers: [],
+    providers: [
+        UserServices
+    ],
     exports: [],
     entryComponents: []
 })

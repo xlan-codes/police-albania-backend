@@ -1,10 +1,12 @@
+import { TrackingLocationComponent } from './tracking-location.component';
+import { TrackingLocationRoutingModule } from './tracking-location.routing';
 import { NgModule } from '@angular/core';
 
 
 @NgModule({
-    imports: [],
+    imports: [TrackingLocationRoutingModule],
     providers: [],
-    declarations: [],
+    declarations: [TrackingLocationComponent],
 })
 export class TrackingLocationModule {
 
