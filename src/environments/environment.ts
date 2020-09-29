@@ -8,5 +8,6 @@ export const environment = {
   baseUrl: 'http://localhost:8080',
   adminUser: '/admin-user',
   user: '/user',
-  notificationService: 'notification'
+  notificationService: 'notification',
+  alert: '/alert'
 };

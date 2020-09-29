@@ -1,7 +1,7 @@
 import { AdminUserServices } from './../../core/services/admin-user.services';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { Table } from 'primeng/table';
-import { User } from 'src/app/models/users.model';
+import { User } from './../../models/users.model';
 
 @Component({
   selector: 'app-admin-users',
